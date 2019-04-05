@@ -1,6 +1,6 @@
-# HeaderPatterns (Visual Code Extension)
+# HeaderPatterns
 
-HeaderPatterns is an extension that sets the background of your header or left menu bar to a background pattern. It works by editing the CSS file used by visual code.
+HeaderPatterns is an extension that sets the background of your header and/or left menu bar to a background pattern. It works by editing the CSS file used by visual code.
 
 ## Status
 
