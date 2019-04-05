@@ -2,8 +2,12 @@
 	"name": "headerpatterns",
 	"displayName": "HeaderPatterns",
 	"description": "Set pattern for header bar and left menu bar.",
-    "version": "0.0.1",
+	"version": "0.0.1",
     "publisher": "Futs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Futsy/vscode-headerpatterns"
+    },
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -20,28 +24,28 @@
 				"command": "extension.headerpatterns.info",
 				"title": "Header patterns - Info"
 			}
-        ],
-        "configuration": {
-            "type": "object",
-            "title": "Plugin header patterns config",
-            "properties": {
-                "headerpattern.enabled": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Plugin header pattern enabled"
-                },
-                "headerpattern.pattern": {
-                    "type": "string",
-                    "default": "",
-                    "description": "The background pattern for the header."
-                },
-                "headerpattern.leftpattern": {
-                    "type": "string",
-                    "default": "",
-                    "description": "The background pattern for the left menu."
-                }
-            }
-        }
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Plugin header patterns config",
+			"properties": {
+				"headerpattern.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Plugin header pattern enabled"
+				},
+				"headerpattern.pattern": {
+					"type": "string",
+					"default": "",
+					"description": "The background pattern for the header."
+				},
+				"headerpattern.leftpattern": {
+					"type": "string",
+					"default": "",
+					"description": "The background pattern for the left menu."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
