@@ -2,6 +2,11 @@
 
 HeaderPatterns is an extension that sets the background of your header or left menu bar to a background pattern. It works by editing the CSS file used by visual code.
 
+## Status
+
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/futs.headerpatterns.svg)](https://marketplace.visualstudio.com/items?itemName=futs.headerpatterns)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating/futs.headerpatterns.svg)](https://vsmarketplacebadge.apphb.com/rating/futs.headerpatterns.svg)
+
 ## Settings.json properties
 
 | Name                      | Type    | Description                                                                 |
