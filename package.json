@@ -1,7 +1,7 @@
 {
 	"name": "headerpatterns",
 	"displayName": "HeaderPatterns",
-	"description": "Set pattern for header bar and left menu bar.",
+	"description": "Set a background pattern for the header bar and left menu bar.",
 	"version": "1.0.0",
     "publisher": "Futs",
     "icon": "icon.png",
