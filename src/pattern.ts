@@ -88,12 +88,20 @@ class Pattern {
                 pickedLeftPattern = (<any>patterns)[prop];
             }
         }
+
+        let sidebarPattern = '';
+        for (let prop in patterns) {
+            if (patterns.hasOwnProperty(prop) && config.sidebarPattern.toLowerCase() == prop.toLowerCase()) {
+                sidebarPattern = (<any>patterns)[prop];
+            }
+        }
         
         let content = `
             /*css-pattern-start*/
             /*headerpatterns.ver.1.0*/
             [id="workbench.parts.titlebar"] { background-image: url(\"${pickedPattern}\") !important; }
             [id="workbench.parts.activitybar"] { background-image: url(\"${pickedLeftPattern}\") !important; }
+            [id="workbench.parts.sidebar"] { background-image: url(\"${sidebarPattern}\") !important; }
             /*css-pattern-end*/
         `; 
         

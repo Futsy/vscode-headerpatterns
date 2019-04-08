@@ -1,6 +1,6 @@
-# HeaderPatterns
+# Patterns
 
-HeaderPatterns is an extension that sets the background of your header and/or left menu bar to a background pattern. It works by editing the CSS file used by visual code.
+Patterns is an extension that sets the background of your header and/or menu bars to a background pattern. It works by editing the CSS file used by Visual Code and looks pretty cool.
 
 ## Status
 
@@ -9,11 +9,12 @@ HeaderPatterns is an extension that sets the background of your header and/or le
 
 ## Settings.json properties
 
-| Name                      | Type    | Description                                                                 |
-| :------------------------ | :-----: | :-------------------------------------------------------------------------- |
-| headerpattern.enabled     | boolean | `true` to enable the extension, `false` to uninstall.                       |
-| headerpattern.pattern     | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
-| headerpattern.leftpattern | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
+| Name                          | Type    | Description                                                                 |
+| :---------------------------- | :-----: | :-------------------------------------------------------------------------- |
+| headerpattern.enabled         | boolean | `true` to enable the extension, `false` to uninstall.                       |
+| headerpattern.pattern         | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
+| headerpattern.leftpattern     | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
+| headerpattern.sidebarPattern | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
 
 > See the bottom of this page for a list of all the supported patterns.
 
@@ -33,8 +34,9 @@ HeaderPatterns is an extension that sets the background of your header and/or le
 This extension contributes the following settings:
 
 * `headerpattern.enable`: Enable/disable this extension.
-* `headerpattern.pattern`: The header pattern that will be used.
-* `headerpattern.leftpattern`: The left menu pattern that will be used.
+* `headerpattern.pattern`: The header pattern to be used.
+* `headerpattern.leftpattern`: The left menu pattern to be used.
+* `headerpattern.sidebarPattern`: The sidebar pattern to be used.
 
 ## Known Issues
 
@@ -135,6 +137,10 @@ If a warning appears simply agree to it, if the extension does not work: try to 
 ## Release Notes
 
 Changes are described here.
+
+### 1.1.0
+
+Added `headerPattern.sidebarPattern`to set the sidebar pattern.
 
 ### 1.0.0
 

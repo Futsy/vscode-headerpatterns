@@ -1,8 +1,8 @@
 {
 	"name": "headerpatterns",
 	"displayName": "Patterns",
-	"description": "Set a background pattern for the header bar and left menu bar.",
-	"version": "1.0.0",
+	"description": "Set a background pattern for the header bar and/or menu bars.",
+	"version": "1.1.0",
     "publisher": "Futs",
     "icon": "icon.png",
     "repository": {
@@ -44,7 +44,12 @@
 					"type": "string",
 					"default": "",
 					"description": "The background pattern for the left menu."
-				}
+                },
+                "headerpattern.sidebarPattern": {
+                    "type": "string",
+                    "default": "",
+                    "description": "The background pattern for the sidebar."
+                }
 			}
 		}
 	},
