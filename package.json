@@ -2,7 +2,7 @@
 	"name": "headerpatterns",
 	"displayName": "Patterns",
 	"description": "Set a background pattern for the header bar and/or menu bars.",
-	"version": "1.1.0",
+	"version": "1.1.1",
     "publisher": "Futs",
     "icon": "icon.png",
     "repository": {
@@ -23,7 +23,7 @@
 		"commands": [
 			{
 				"command": "extension.headerpatterns.info",
-				"title": "Header patterns - Info"
+				"title": "Patterns - Info"
 			}
 		],
 		"configuration": {
@@ -42,7 +42,7 @@
 				},
 				"headerpattern.leftpattern": {
 					"type": "string",
-					"default": "",
+					"default": "Hexagon",
 					"description": "The background pattern for the left menu."
                 },
                 "headerpattern.sidebarPattern": {

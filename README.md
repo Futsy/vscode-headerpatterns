@@ -2,10 +2,18 @@
 
 Patterns is an extension that sets the background of your header and/or menu bars to a background pattern. It works by editing the CSS file used by Visual Code and looks pretty cool.
 
+> If you get a warning saying: "Your Code installation appears to be corrupt. Please reinstall." try running as admin or hiding the message (it displays due to the CSS system file being changed).
+
 ## Status
 
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/futs.headerpatterns.svg)](https://marketplace.visualstudio.com/items?itemName=futs.headerpatterns)
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating/futs.headerpatterns.svg)](https://vsmarketplacebadge.apphb.com/rating/futs.headerpatterns.svg)
+
+## Screenies
+
+![](https://imgur.com/e0dYYk2.png)
+![](https://imgur.com/O7Aw5Xt.png)
+![](https://imgur.com/bbjBzBy.png)
 
 ## Settings.json properties
 
@@ -14,15 +22,9 @@ Patterns is an extension that sets the background of your header and/or menu bar
 | headerpattern.enabled         | boolean | `true` to enable the extension, `false` to uninstall.                       |
 | headerpattern.pattern         | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
 | headerpattern.leftpattern     | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
-| headerpattern.sidebarPattern | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
+| headerpattern.sidebarPattern  | string  | `""` for no pattern, any from: https://www.heropatterns.com/ for a pattern. |
 
 > See the bottom of this page for a list of all the supported patterns.
-
-## Screenies
-
-![](https://imgur.com/O7Aw5Xt.png)
-![](https://imgur.com/bbjBzBy.png)
-![](https://imgur.com/e0dYYk2.png)
 
 ## Credits
 
@@ -137,6 +139,10 @@ If a warning appears simply agree to it, if the extension does not work: try to 
 ## Release Notes
 
 Changes are described here.
+
+### 1.1.1
+
+Set default for left bar to hexagon so something works right off the bat.
 
 ### 1.1.0
 
