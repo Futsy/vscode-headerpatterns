@@ -2,7 +2,7 @@
 	"name": "headerpatterns",
 	"displayName": "Patterns",
 	"description": "Set a background pattern for the header bar and/or menu bars.",
-	"version": "1.1.1",
+	"version": "1.2.0",
     "publisher": "Futs",
     "icon": "icon.png",
     "repository": {
@@ -10,7 +10,7 @@
         "url": "https://github.com/Futsy/vscode-headerpatterns"
     },
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.16.0"
 	},
 	"categories": [
 		"Other"
@@ -42,13 +42,28 @@
 				},
 				"headerpattern.leftpattern": {
 					"type": "string",
-					"default": "Hexagon",
+					"default": "Hexagons",
 					"description": "The background pattern for the left menu."
                 },
                 "headerpattern.sidebarPattern": {
                     "type": "string",
                     "default": "",
                     "description": "The background pattern for the sidebar."
+                },
+                "headerpattern.fillColor": {
+                    "type": "string",
+                    "default": "010101",
+                    "description": "What color the foreground lines will have."
+                },
+                "headerpattern.fillColorLeft": {
+                    "type": "string",
+                    "default": "010101",
+                    "description": "What color the foreground lines will have."
+                },
+                "headerpattern.fillColorSidebar": {
+                    "type": "string",
+                    "default": "010101",
+                    "description": "What color the foreground lines will have."
                 }
 			}
 		}

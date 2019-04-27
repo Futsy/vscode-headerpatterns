@@ -59,6 +59,39 @@ class Pattern {
         return FileType.isNew;
     }
 
+    private getFillColor(): string {
+        let config = vscode.workspace.getConfiguration('headerpattern');
+    
+        if (config.fillColor.length === 6) {
+            return config.fillColor;
+        }
+        else {
+            return '010101';
+        }
+    }
+
+    private getFillColorLeft(): string {
+        let config = vscode.workspace.getConfiguration('headerpattern');
+    
+        if (config.fillColorLeft.length === 6) {
+            return config.fillColorLeft;
+        }
+        else {
+            return '010101';
+        }
+    }
+
+    private getFillColorSidebar(): string {
+        let config = vscode.workspace.getConfiguration('headerpattern');
+    
+        if (config.fillColorSidebar.length === 6) {
+            return config.fillColorSidebar;
+        }
+        else {
+            return '010101';
+        }
+    }
+
     private install(refresh?: boolean): void {
         let lastConfig = this.config;
         let config = vscode.workspace.getConfiguration('headerpattern');
@@ -78,21 +111,21 @@ class Pattern {
         let pickedPattern = '';
         for (let prop in patterns) {
             if (patterns.hasOwnProperty(prop) && config.pattern.toLowerCase() === prop.toLowerCase()) {
-                pickedPattern = (<any>patterns)[prop];
+                pickedPattern = (<any>patterns)[prop](this.getFillColor());
             }
         }
 
         let pickedLeftPattern = '';
         for (let prop in patterns) {
             if (patterns.hasOwnProperty(prop) && config.leftpattern.toLowerCase() === prop.toLowerCase()) {
-                pickedLeftPattern = (<any>patterns)[prop];
+                pickedLeftPattern = (<any>patterns)[prop](this.getFillColorLeft());
             }
         }
 
         let sidebarPattern = '';
         for (let prop in patterns) {
-            if (patterns.hasOwnProperty(prop) && config.sidebarPattern.toLowerCase() == prop.toLowerCase()) {
-                sidebarPattern = (<any>patterns)[prop];
+            if (patterns.hasOwnProperty(prop) && config.sidebarPattern.toLowerCase() === prop.toLowerCase()) {
+                sidebarPattern = (<any>patterns)[prop](this.getFillColorSidebar());
             }
         }
         
@@ -103,7 +136,7 @@ class Pattern {
             [id="workbench.parts.activitybar"] { background-image: url(\"${pickedLeftPattern}\") !important; }
             [id="workbench.parts.sidebar"] { background-image: url(\"${sidebarPattern}\") !important; }
             /*css-pattern-end*/
-        `; 
+        `;
         
         this.saveCssContent(this.clearCssContent(this.getCssContent()) + content);
         vscode.window.showInformationMessage('Pattern has been changed! Please restart.', { title: "Restart vscode" })
