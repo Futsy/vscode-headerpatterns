@@ -15,10 +15,10 @@ class Pattern {
     private config: any = vscode.workspace.getConfiguration('headerpattern');
 
     private getCssContent = (): string =>
-        fs.readFileSync(path.join(path.dirname(require.main!.filename), 'vs', 'workbench', 'workbench.main.css'), 'utf-8')
+        fs.readFileSync(path.join(path.dirname(require.main!.filename), 'vs', 'workbench', 'workbench.desktop.main.css'), 'utf-8')
 
     private saveCssContent(content: string): void {
-        fs.writeFileSync(path.join(path.dirname(require.main!.filename), 'vs', 'workbench', 'workbench.main.css'), content, 'utf-8');
+        fs.writeFileSync(path.join(path.dirname(require.main!.filename), 'vs', 'workbench', 'workbench.desktop.main.css'), content, 'utf-8');
     }
 
     private initialize(): void {

@@ -2,7 +2,7 @@
 	"name": "headerpatterns",
 	"displayName": "Patterns",
 	"description": "Set a background pattern for the header bar and/or menu bars.",
-	"version": "1.2.0",
+	"version": "1.3.0",
     "publisher": "Futs",
     "icon": "icon.png",
     "repository": {

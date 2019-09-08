@@ -147,6 +147,10 @@ If a warning appears simply agree to it, if the extension does not work: try to 
 
 Changes are described here.
 
+### 1.3.0
+
+Fixed rename of the css file.
+
 ### 1.2.0
 
 Added support for setting the foreground color.
