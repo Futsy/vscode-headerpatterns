@@ -37,7 +37,7 @@ class Pattern {
         if (!info.firstload) {
             return false;
         } 
-        vscode.window.showInformationMessage('Hey, you can configure what header pattern is shown in the settings.json file.');
+        vscode.window.showInformationMessage('Hey, you can configure what pattern is shown in the settings.json file.');
         info.firstload = false;
         fs.writeFileSync(configPath, JSON.stringify(info, null, '    '), 'utf-8');
 
@@ -92,6 +92,17 @@ class Pattern {
         }
     }
 
+    private getFillColorEditor(): string {
+        let config = vscode.workspace.getConfiguration('headerpattern');
+    
+        if (config.fillColorEditor.length === 6) {
+            return config.fillColorEditor;
+        }
+        else {
+            return '010101';
+        }
+    }
+
     private install(refresh?: boolean): void {
         let lastConfig = this.config;
         let config = vscode.workspace.getConfiguration('headerpattern');
@@ -128,6 +139,13 @@ class Pattern {
                 sidebarPattern = (<any>patterns)[prop](this.getFillColorSidebar());
             }
         }
+
+        let editorPattern = '';
+        for (let prop in patterns) {
+            if (patterns.hasOwnProperty(prop) && config.editorPattern.toLowerCase() === prop.toLowerCase()) {
+                editorPattern = (<any>patterns)[prop](this.getFillColorEditor());
+            }
+        }
         
         let content = `
             /*css-pattern-start*/
@@ -135,6 +153,11 @@ class Pattern {
             [id="workbench.parts.titlebar"] { background-image: url(\"${pickedPattern}\") !important; }
             [id="workbench.parts.activitybar"] { background-image: url(\"${pickedLeftPattern}\") !important; }
             [id="workbench.parts.sidebar"] { background-image: url(\"${sidebarPattern}\") !important; }
+            .editor-instance { background-image: url(\"${editorPattern}\") !important; }
+            .monaco-editor { background-color: transparent !important; }
+            .monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
+                background-color: transparent !important;
+            }
             /*css-pattern-end*/
         `;
         

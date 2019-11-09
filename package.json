@@ -2,7 +2,7 @@
 	"name": "headerpatterns",
 	"displayName": "Patterns",
 	"description": "Set a background pattern for the header bar and/or menu bars.",
-	"version": "1.3.0",
+	"version": "1.4.0",
     "publisher": "Futs",
     "icon": "icon.png",
     "repository": {
@@ -50,6 +50,11 @@
                     "default": "",
                     "description": "The background pattern for the sidebar."
                 },
+                "headerpattern.editorPattern": {
+                    "type": "string",
+                    "default": "GraphPaper",
+                    "description": "The background pattern for the editor."
+                },
                 "headerpattern.fillColor": {
                     "type": "string",
                     "default": "010101",
@@ -64,6 +69,11 @@
                     "type": "string",
                     "default": "010101",
                     "description": "What color the foreground lines will have."
+                },
+                "headerpattern.fillColorEditor": {
+                    "type": "string",
+                    "default": "010101",
+                    "description": "What color the editor lines will have."
                 }
 			}
 		}
