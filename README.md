@@ -1,5 +1,7 @@
 # Patterns
 
+**Only works on Windows - Requires you to run as Admin to have the patterns applied**
+
 Patterns is an extension that sets the background of your header/menu bars/settings and/or editor to a nice background pattern. It works by editing the CSS file used by Visual Code and looks pretty cool.
 
 > If you get a warning saying: "Your Code installation appears to be corrupt. Please reinstall." try running as admin or hiding the message (it displays due to the CSS system file being changed).
